@@ -30,7 +30,7 @@ void loop() {
   } else if (lightMode == "rainbow") {
     showTheRainbow();
   } else {
-    led.setPixelColor(0, 255, 255, 255); // white
+    led.setPixelColor(0, 0, 175, 255); // white
     led.show();
   }
 }
