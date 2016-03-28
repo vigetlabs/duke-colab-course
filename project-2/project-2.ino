@@ -1,14 +1,9 @@
-#include "neopixel/neopixel.h"
-
-#define PIXEL_COUNT 1
-#define PIXEL_PIN   D3
-#define PIXEL_TYPE  WS2812B
-
 String lightMode;
-Adafruit_NeoPixel led = Adafruit_NeoPixel(PIXEL_COUNT, PIXEL_PIN, PIXEL_TYPE);
 
 void setup() {
-  led.begin();
+  RGB.control(true);
+  RGB.color(0, 0, 0);
+
   Particle.function("setLight", setLight);
 }
 
@@ -19,19 +14,15 @@ int setLight(String command) {
 
 void loop() {
   if (lightMode == "red") {
-    led.setPixelColor(0, 255, 0, 0);
-    led.show();
+    RGB.color(255, 0, 0);
   } else if (lightMode == "green") {
-    led.setPixelColor(0, 0, 255, 0);
-    led.show();
+    RGB.color(0, 255, 0);
   } else if (lightMode == "blue") {
-    led.setPixelColor(0, 0, 0, 255);
-    led.show();
+    RGB.color(0, 0, 255);
   } else if (lightMode == "rainbow") {
     showTheRainbow();
   } else {
-    led.setPixelColor(0, 0, 175, 255); // white
-    led.show();
+    RGB.color(0, 175, 255); // white
   }
 }
 
@@ -42,38 +33,32 @@ void showTheRainbow() {
 
   // start with Red on, and make Green grow brighter
   for (int i = 0; i < 255; i += 10) {
-    led.setPixelColor(0, 255, i, 0);
-    led.show();
+    RGB.color(255, i, 0);
     delay(rainbowDelay);
   }
   // Green is now on, make Red shrink
   for (int i = 0; i < 255; i += 10) {
-    led.setPixelColor(0, 255 - i, 255, 0);
-    led.show();
+    RGB.color(255 - i, 255, 0);
     delay(rainbowDelay);
   }
   // Green is now on, make Blue grow
   for (int i = 0; i < 255; i += 10) {
-    led.setPixelColor(0, 0, 255, i);
-    led.show();
+    RGB.color(0, 255, i);
     delay(rainbowDelay);
   }
   // Blue is now on, make Green shrink
   for (int i = 0; i < 255; i += 10) {
-    led.setPixelColor(0, 0, 255 - i, 255);
-    led.show();
+    RGB.color(0, 255 - i, 255);
     delay(rainbowDelay);
   }
   // Blue is now on, make Red grow
   for (int i = 0; i < 255; i += 10) {
-    led.setPixelColor(0, i, 0, 255);
-    led.show();
+    RGB.color(i, 0, 255);
     delay(rainbowDelay);
   }
   // Red is now on, make Blue shrink
   for (int i = 0; i < 255; i += 10) {
-    led.setPixelColor(0, 255, 0, 255 - i);
-    led.show();
+    RGB.color(255, 0, 255 - i);
     delay(rainbowDelay);
   }
 }
