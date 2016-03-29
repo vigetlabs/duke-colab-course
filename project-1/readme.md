@@ -18,4 +18,4 @@ In this project we'll use the Particle Photon, a button, and Particle Event publ
 
 #### Component Layout
 
-![fritzing-diagram](https://s3.amazonaws.com/vigesharing-is-vigecaring/jsinichko/0904g5bve.jpg)
+![fritzing-diagram](https://s3.amazonaws.com/vigesharing-is-vigecaring/jsinichko/1329rrwmi.jpg)
