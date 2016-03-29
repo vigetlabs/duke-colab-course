@@ -25,4 +25,4 @@ This project will make use of an open source library called Neopixel. To see how
 
 #### Component Layout
 
-![fritzing-diagram](https://s3.amazonaws.com/vigesharing-is-vigecaring/jsinichko/1804ytbai.jpg)
+![fritzing-diagram](https://s3.amazonaws.com/vigesharing-is-vigecaring/jsinichko/1329rrwmi.jpg)
