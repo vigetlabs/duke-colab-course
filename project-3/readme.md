@@ -18,4 +18,4 @@ You'll notice that the code subscribes and publishes to the `"duke-team-42"` eve
 
 #### Component Layout
 
-![fritzing-diagram](https://s3.amazonaws.com/vigesharing-is-vigecaring/jsinichko/1804ytbai.jpg)
+![fritzing-diagram](https://s3.amazonaws.com/vigesharing-is-vigecaring/jsinichko/1329rrwmi.jpg)
